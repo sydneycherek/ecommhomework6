@@ -12,7 +12,21 @@
     
     <script>
 
-    document.getElementById("placehere").innerHTML = generateData("Math.sin(x)", 0, 10, 0.5);
+    var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+    var yValues = [55, 49, 44, 24, 15];
+    var barColors = ["red", "green","blue","orange","brown"];
+
+    new Chart("myChart", {
+    type: "bar",
+    data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+    },
+    options: {...}
+    });
       
     </script>
 
